@@ -1,0 +1,494 @@
+body{
+    background-color: #F8EDE3;
+    font-family: 'Inter', sans-serif;
+}
+
+.menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Remove background color */
+    padding: 20px 0; /* Add padding */
+    z-index: 999; /* Ensure the menu bar is above other content */
+    text-align: center;
+    justify-content: center;
+}
+
+.menubar a {
+    color: #A2B29F;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 80px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    padding: 50px;
+  }
+
+  .menubar a:hover {
+    color: #fddb3a;
+  }
+  
+  .menubar .dot {
+    width: 6px;
+    height: 6px;
+    background: #fddb3a;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .menubar a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .menubar a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(110px);
+    transform: translateX(110px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .menubar a:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .menubar a:nth-child(4):hover ~ .dot {
+    -webkit-transform: translateX(285px);
+    transform: translateX(285px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+
+
+
+.skills-row{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.skills-row-two{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.circle{
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #A2B29F;
+    margin: 0 30px;
+    position: relative;
+    animation: bubble 1s infinite alternate;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one img{
+    width: 50px
+}
+
+.two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two img{
+    width: 50px
+}
+
+.six {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.six img{
+    width: 50px
+}
+
+.seven {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seven img{
+    width: 50px
+}
+
+.four {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.four img{
+    width: 50px
+}
+
+.five {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.five img{
+    width: 50px
+}
+
+.eight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eight img{
+    width: 50px
+}
+
+.nine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nine img{
+    width: 50px
+}
+
+.ten {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ten img{
+    width: 50px
+}
+
+.center img {
+    width: 50px; /* Adjust the size of the white icon */
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.menuitem:not(:last-child)::after{
+    content: "|";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.who{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 78px;
+    font-style: italic;
+}
+
+:root {
+	--delay: 0;
+	--duration: 800ms;
+	--iterations: 1;
+}
+/* •·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
+
+
+.name_text,
+.name_text::after {
+	animation-delay: var(--animation-delay, 2s);
+	animation-iteration-count: var(--iterations, 1);
+	animation-duration: var(--duration, 800ms);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.about_heading{
+    color: #A2B29F;
+}
+
+.skills_heading{
+    color: #A2B29F;
+}
+
+#contacttxt{
+    color: #798777;
+    font-style: italic;
+}
+
+.projects_heading{
+    color: #A2B29F;
+    text-align: center;
+    margin-top: 150px
+
+}
+
+.contact_heading{
+    color: #A2B29F;
+    text-align: center;
+    margin-top: 150px
+
+}
+
+.contact{
+    text-align: center;
+}
+
+#underimgtxt{
+    color: #A2B29F;
+    text-align: center;
+    font-style: italic;
+    font-weight: 100px;
+
+}
+
+.achievements_heading{
+    color: #A2B29F;
+}
+
+.about_text{
+    color: #798777;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 10px;
+}
+.name_text {
+	--animation-delay: var(--delay, 0);
+	--animation-duration: var(--duration, 800ms);
+	--animation-iterations: var(--iterations, 1);
+	position: relative;
+	font-size: 10vw;
+	animation-name: clip-text;
+	color: #A2B29F;
+	
+	cursor: default;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #BDD2B6;
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		pointer-events: none;
+		animation-name: text-revealer;
+	}
+	
+}
+
+.degree_text,
+.degree_text::after {
+	animation-delay: var(--animation-delay, 2s);
+	animation-iteration-count: var(--iterations, 1);
+	animation-duration: var(--duration, 800ms);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.degree_text {
+	--animation-delay: var(--delay, 0);
+	--animation-duration: var(--duration, 800ms);
+	--animation-iterations: var(--iterations, 1);
+	position: relative;
+	font-size: 2vw;
+    text-align: center;
+    font-style: italic;
+	animation-name: clip-text;
+	color: #A2B29F;
+	white-space: nowrap;
+	cursor: default;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #BDD2B6;
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		pointer-events: none;
+		animation-name: text-revealer;
+	}
+	
+}
+
+
+@keyframes clip-text {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes text-revealer {
+	
+	0%, 50% {
+		transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		transform: scaleX(1);
+	}
+	
+	100% {
+		transform: scaleX(0);
+	}
+}
+
+.about{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.skills{
+
+        text-align: center;
+        margin-top: 150px;
+    
+}
+
+.achievements{
+    text-align: center;
+    margin-top: 130px;
+    margin-bottom: 40px;
+}
+
+.projects{
+    text-align: center;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#microsoftimg{
+    width: 800px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.card {
+    width: 500px;
+    height: 300px;
+
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.card-text a {
+    margin-top: 10px; /* Add spacing between text and link */
+    color: blue; /* Change link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.card-text a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.card-text {
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-style: bold;
+    color: #A2B29F;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.arrow:hover {
+    color: #A2B29F;
+}
+
+.left-arrow {
+    left: 300px;
+}
+
+.right-arrow {
+    right: 300px;
+}
