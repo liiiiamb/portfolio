@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Portfolio Site</title>
+        <title>Liam Boyd</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -18,25 +18,33 @@
         <![endif]-->
         
         <script src="" async defer></script>
-        <nav class="menubar" id="menubar">
-            <a href="#about_section">About</a>
-            <a href="#skills_section">Skills</a>
-            <a href="#projects_section">Projects</a>
-            <a href="#achievements_section">Certifications</a>
-            <a href="#contact_section">Contact</a>
-            <a href="#">CV</a>
-            <div class="dot"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
-        </nav>
+
+        <div class="top-menu">
+            <a href="#about_section" class="menuitem">About Me</a>
+            
+            <a href="#skills_section" class="menuitem">Skills</a>
+            
+            <a href="#projects_section" class="menuitem">Projects</a>
+            
+            <a href="#achievements_section" class="menuitem">Certifications</a>
+            
+            <a href="#contact_section" class="menuitem">Contact Me</a>
+            
+            <a href="assets/Resume.pdf"  class="menuitem">CV</a>
+        </div>
+        
         <div class="who">
             <h2 class="name_text">Liam Boyd</h2>
             <h2 class="degree_text">Software Engineering Graduate</h2></div>
         <div class="about" id="about_section">
-            <h1 class="about_heading">About Me...</h1> <!--TO-DO CHANGE TEXT CONTENT BELOW-->
+            <h1 class="about_heading" id="animateUp">About Me...</h1> <!--TO-DO CHANGE TEXT CONTENT BELOW-->
             <p class="about_text">I have recently graduated with a 1st class degree from Edge Hill University, studying Software Engineering. Throughout my 3 years of study, I have obtained a large amount of knowledge in numerous areas including, but not limited to: Java, Python, HTML, CSS, JavaScript, SQL, Machine Learning, and App Development. Following the completion of my degree, I was published in the research paper 'Software Impacts' with a paper entitled 'FridgeSnap: A software for recipe suggestion based on food image classification'. I have a number of completed projects that range from a fully working website built using HTML, CSS, and JavaScript, a healthcare intent-based chatbot built using Python, and most recently, an image classification Android application that is built with the aim to reduce food waste, by suggesting recipes.</p> 
         </div>
         <div class="skills" id="skills_section">
-            <h1 class="skills_heading">Skills</h1>
+            <h1 class="skills_heading" id="animateUp">Skills</h1>
             <div class="skills-row">
                 <div class="circle one"><img src="images/java.png" alt="Java icon"></div>
                 <div class="circle two"><img src="images/py.png" alt="python icon"></div>
@@ -52,7 +60,7 @@
                 <div class="circle ten"><img src="images/database-storage.png" alt="database"></div>
             </div>
         </div>
-        <h1 class="projects_heading">Projects</h1>
+        <h1 class="projects_heading" id="animateUp">Projects</h1>
 
         <div class="projects" id="projects_section">
             <div class="arrow left-arrow">&lt;</div>
@@ -69,14 +77,14 @@
 
         </div>
         <div class="achievements" id="achievements_section">
-            <h1 class="achievements_heading">Certifications</h1>
+            <h1 class="achievements_heading" id="animateUp">Certifications</h1>
             <img src="images/microsoft.png" alt="Microsoft" id="microsoftimg">
             <p id="underimgtxt">Microsoft Certified: Azure AI Fundamentals. Awarded February 2023</p>
 
 
         </div>
         <div class="contact" id="contact_section">
-            <h1 class="contact_heading">Contact Me</h1>
+            <h1 class="contact_heading" id="animateUp">Contact Me</h1>
             <p id="contacttxt">Liam Boyd</p>
             <p id="contacttxt">liam_boyd2@outlook.com</p>
             <a href="https://www.linkedin.com/in/liam-boyd-7b4463214/" id="contacttxt">LinkedIn</a>
@@ -87,6 +95,21 @@
 
         </div>
         <script src="script.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var menuItems = document.querySelectorAll(".menubar a");
+                menuItems.forEach(function(item) {
+                    item.addEventListener("click", function(event) {
+                        event.preventDefault(); // Prevent default navigation behavior
+                        var targetId = this.getAttribute("href"); // Get the target section ID
+                        var targetSection = document.querySelector(targetId); // Find the target section
+                        if (targetSection) {
+                            targetSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the target section
+                        }
+                    });
+                });
+            });
+        </script>
 
     </body>
 </html>

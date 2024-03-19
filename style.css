@@ -3,78 +3,7 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
-.menubar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent; /* Remove background color */
-    padding: 20px 0; /* Add padding */
-    z-index: 999; /* Ensure the menu bar is above other content */
-    text-align: center;
-    justify-content: center;
-}
 
-.menubar a {
-    color: #A2B29F;
-    text-decoration: none;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    font-weight: 500;
-    display: inline-block;
-    width: 80px;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    padding: 50px;
-  }
-
-  .menubar a:hover {
-    color: #fddb3a;
-  }
-  
-  .menubar .dot {
-    width: 6px;
-    height: 6px;
-    background: #fddb3a;
-    border-radius: 50%;
-    opacity: 0;
-    -webkit-transform: translateX(30px);
-    transform: translateX(30px);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .menubar a:nth-child(1):hover ~ .dot {
-    -webkit-transform: translateX(30px);
-    transform: translateX(30px);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    opacity: 1;
-  }
-  
-  .menubar a:nth-child(2):hover ~ .dot {
-    -webkit-transform: translateX(110px);
-    transform: translateX(110px);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    opacity: 1;
-  }
-  
-  .menubar a:nth-child(3):hover ~ .dot {
-    -webkit-transform: translateX(200px);
-    transform: translateX(200px);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    opacity: 1;
-  }
-  
-  .menubar a:nth-child(4):hover ~ .dot {
-    -webkit-transform: translateX(285px);
-    transform: translateX(285px);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    opacity: 1;
-  }
   
 
 
@@ -215,13 +144,7 @@ body{
     }
 }
 
-.menuitem:not(:last-child)::after{
-    content: "|";
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
+
 
 .who{
     text-align: center;
@@ -230,11 +153,58 @@ body{
     font-style: italic;
 }
 
+
 :root {
 	--delay: 0;
 	--duration: 800ms;
 	--iterations: 1;
 }
+
+
+.top-menu {
+    display: flex;
+    justify-content: center;
+    color: #A2B29F;
+    font-style: italic;
+    font-size: 25px;
+    align-items: flex-start; /* Align items at the top */
+    margin-top: 80px; /* Adjust as needed */
+}
+
+.menuitem{
+    padding: 50px;
+}
+
+#animateUp{
+
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+
+.top-menu span {
+    padding: 50px; /* Add padding to each item */
+    margin-left: 50px;
+}
+
+.top-menu a {
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Inherit color from parent */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.top-menu a:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: #007bff; /* Change color on hover if desired */
+}
+
+.separator {
+    border-left: 2px solid #A2B29F; /* Add vertical line */
+    height: 20px; /* Adjust height as needed */
+    margin: 0 10px; /* Adjust spacing between items */
+}
+
 /* •·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
 
 
@@ -276,6 +246,7 @@ body{
 
 .contact{
     text-align: center;
+    margin-bottom: 50px;
 }
 
 #underimgtxt{
@@ -292,9 +263,10 @@ body{
 
 .about_text{
     color: #798777;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 100;
-    padding: 10px;
+    padding: 100px;
+    
 }
 .name_text {
 	--animation-delay: var(--delay, 0);
@@ -351,7 +323,7 @@ body{
 		position: absolute;
 		z-index: 999;
 		top: 0;
-		left: 0;
+		left: 0 ;
 		right: 0;
 		bottom: 0;
 		background-color: #BDD2B6;
@@ -362,6 +334,8 @@ body{
 	}
 	
 }
+
+
 
 
 @keyframes clip-text {
@@ -413,6 +387,7 @@ body{
     margin-top: 130px;
     margin-bottom: 40px;
 }
+
 
 .projects{
     text-align: center;
